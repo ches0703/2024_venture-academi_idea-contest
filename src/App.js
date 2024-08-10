@@ -7,8 +7,7 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <Container maxWidth='xl'>
-
+    <Container maxWidth='lg'>
       <Header></Header>
       <Outlet></Outlet>
     </Container>
