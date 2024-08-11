@@ -21,8 +21,13 @@ const data = {
       "value": 345,
     },
     {
-      "id": "ETC...",
-      "label": "ETC...",
+      "id": "HTML",
+      "label": "JavaScript",
+      "value": 488,
+    },
+    {
+      "id": "Next.js",
+      "label": "Next.js",
       "value": 313,
     }
   ]

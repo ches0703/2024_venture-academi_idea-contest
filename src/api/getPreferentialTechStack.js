@@ -1,8 +1,8 @@
 const data = {
   'front-end' : [
     {
-      "id": "Git/Github",
-      "label": "Git/Github",
+      "id": "Github",
+      "label": "Github",
       "value": 884,
     },
     {
@@ -31,8 +31,8 @@ const data = {
       "value": 140,
     },
     {
-      "id": "ETC",
-      "label": "ETC",
+      "id": "AWS",
+      "label": "AWS",
       "value": 225,
     },
   ]

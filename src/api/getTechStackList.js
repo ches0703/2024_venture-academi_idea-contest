@@ -23,7 +23,7 @@ const data = {
     {
       "id": "Jquery",
       "label": "Jquery",
-      "value": 500,
+      "value": 78,
     },
     {
       "id": "TypeScript",
@@ -36,8 +36,13 @@ const data = {
       "value": 222,
     },
     {
-      "id": "ETC...",
-      "label": "ETC...",
+      "id": "CSS",
+      "label": "CSS",
+      "value": 188,
+    },
+    {
+      "id": "Next.js",
+      "label": "Next.js",
       "value": 313,
     }
   ]
