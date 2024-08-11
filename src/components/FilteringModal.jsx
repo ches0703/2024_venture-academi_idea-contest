@@ -21,8 +21,10 @@ const FilteringModal = ({ open, handleClose }) => {
 
   const [searchParams, setSearchParams] = useSearchParams();
   const [job, setJob] = useState(searchParams.get('job') || '');
-  const [myTechStack, setMytechStack] = useState(searchParams.get('tech-stack')?.split(',') || [])
-  const [region, setRegion] = useState(searchParams.get('region')?.split(',') || [])
+  const [myTechStack, setMytechStack] = 
+    useState(Boolean(searchParams.get('tech-stack')) ? searchParams.get('tech-stack')?.split(',') : [])
+  const [region, setRegion] = 
+    useState(Boolean(searchParams.get('region')) ? searchParams.get('region')?.split(',') : [])
   const [salary, setSalary] = useState(searchParams.get('salary') || '')
   const [career, setCareer] = useState(searchParams.get('career') || '')
   const techStackList = useRef(getTechStackList('front-end').map(el => el.id))
