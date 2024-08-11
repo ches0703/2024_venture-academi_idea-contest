@@ -19,7 +19,7 @@ const JobStackSlide1 = () => {
   return (
     <Slide>
       <Box textAlign={'center'} marginBottom={'1rem'}>
-        <Typography color={'#FFFFFF'} variant='h2'>{JobLabel[job]['kr']}의 주요 기술스택은 다음과 같아요.</Typography>
+        <Typography color={'#FFFFFF'} variant='h3'>{JobLabel[job]['kr']}의 주요 기술스택은 다음과 같아요.</Typography>
       </Box>
       <Box margin={'auto'}>
         <Stack direction={'row'} flexWrap={'wrap'} alignItems={'flex-end'} justifyContent={'center'}>

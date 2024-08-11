@@ -12,12 +12,12 @@ const JobStackSlide2 = () => {
   return (
     <Slide>
       <Box textAlign={'center'} marginBottom={'1rem'}>
-        <Typography color={'#FFFFFF'} variant='h2'>{JobLabel[job]['kr']}에게 기업이 필수적으로 요구하는 기술 스택의 순위는 다음과 같아요.</Typography>
+        <Typography color={'#FFFFFF'} variant='h3'>{JobLabel[job]['kr']}에게 기업이 필수적으로 요구하는 기술 스택의 순위는 다음과 같아요.</Typography>
       </Box>
       <ResponsivePie
-        height={500}
+        height={450}
         data={data}
-        margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
+        margin={{ top: 80, right: 80, bottom: 40, left: 80 }}
         endAngle={-360}
         sortByValue={true}
         innerRadius={0.7}
