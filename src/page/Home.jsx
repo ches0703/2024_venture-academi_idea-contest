@@ -20,6 +20,9 @@ const Home = () => {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <>
@@ -33,7 +36,6 @@ const Home = () => {
               backgroundColor: 'rgba(0,0,0,0)'
             },
             borderRadius: '25px',
-            transition: 'ease-in-out 0.5s',
             fontWeight: '700',
             width: '100%',
             fontSize: '4rem',
@@ -47,6 +49,7 @@ const Home = () => {
         id="menu"
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
+        onClose={handleClose}
         slotProps={{
           paper: {
             sx: {
@@ -58,7 +61,7 @@ const Home = () => {
         }}
       >
         <MenuItem onClick={() => {navigate('/job-stack/front-end')}} value={1}>프론트 엔드 개발자</MenuItem>
-        <MenuItem onClick={() => {navigate('/job-stack/front-end')}} value={2}>백엔드 개발자</MenuItem>
+        <MenuItem onClick={() => {navigate('/job-stack/back-end')}} value={2}>백엔드 개발자</MenuItem>
       </Menu>
     </>
   )
