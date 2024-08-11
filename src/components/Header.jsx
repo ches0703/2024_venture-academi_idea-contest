@@ -5,7 +5,7 @@ import {
   Typography
 } from '@mui/material'
 import { styled } from '@mui/material'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 const JOB_SKILL = 'JOB_SKILL'
 const JOB_POSTING = 'JOB_POSTING'
@@ -13,10 +13,9 @@ const JOB_POSTING = 'JOB_POSTING'
 const Header = () => {
 
   const navigate = useNavigate()
-  const [tab, setTab] = useState(JOB_SKILL)
-  const handleTab = (newTab) => {
-    setTab(newTab)
-  }
+  const location = useLocation()
+  const currentPath = location.pathname
+  const tab = (currentPath === '/job-post') ? JOB_POSTING : JOB_SKILL
 
   useEffect(() => {
     // 탭 상태에 따라 배경 색을 변경합니다.
@@ -45,7 +44,6 @@ const Header = () => {
           isSelect={(tab === JOB_SKILL)}
           handleClick={() => {
             navigate('/')
-            handleTab(JOB_SKILL)
           }}
         >
           직무별 요구 사항
@@ -54,7 +52,6 @@ const Header = () => {
           isSelect={(tab === JOB_POSTING)}
           handleClick={() => {
             navigate('/job-post')
-            handleTab(JOB_POSTING)
           }}
         >
           채용 공고
