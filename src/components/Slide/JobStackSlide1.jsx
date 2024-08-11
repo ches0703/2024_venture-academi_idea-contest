@@ -80,7 +80,7 @@ const TechCard = styled(Box)((props) => {
     backgroundColor: getPastelColor(props.value, 0.1),
     transition: 'ease-in-out 0.3s',
     '&:hover': {
-      transform: 'scale(1.2)',
+      padding: `${props.value / 30 + 10}px`,
     },
   }
 })

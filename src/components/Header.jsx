@@ -69,7 +69,7 @@ const Side = styled(Box)((props) => {
   return {
     backgroundColor: props.color,
     position: 'absolute',
-    width: (props.select === 'true') ? '60%' : '40%',
+    width: (props.select === 'true') ? '55%' : '45%',
     height: '10vh',
     top: '0',
     right: props.right && '0',
