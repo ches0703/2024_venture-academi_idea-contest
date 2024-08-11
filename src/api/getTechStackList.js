@@ -11,8 +11,8 @@ const data = {
       "value": 115,
     },
     {
-      "id": "Vue",
-      "label": "Vue",
+      "id": "Vue.js",
+      "label": "Vue.js",
       "value": 192,
     },
     {

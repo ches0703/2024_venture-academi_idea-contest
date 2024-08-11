@@ -6,8 +6,8 @@ const data = {
       "value": 700,
     },
     {
-      "id": "Vue",
-      "label": "Vue",
+      "id": "Vue.js",
+      "label": "Vue.js",
       "value": 192,
     },
     {
