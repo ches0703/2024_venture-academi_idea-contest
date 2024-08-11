@@ -19,6 +19,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import JobLabel from '../constant/JobLabel';
 import JobStackSlide1 from '../components/Slide/JobStackSlide1';
 import JobStackSlide2 from '../components/Slide/JobStackSlide2';
+import JobStackSlide3 from '../components/Slide/JobStackSlide3';
 
 const JobStack = () => {
 
@@ -79,7 +80,7 @@ const JobStack = () => {
       >
         <SwiperSlide><JobStackSlide1></JobStackSlide1></SwiperSlide>
         <SwiperSlide><JobStackSlide2></JobStackSlide2></SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide><JobStackSlide3></JobStackSlide3></SwiperSlide>
       </Swiper>
       <style>
         {`
