@@ -12,7 +12,7 @@ import { useParams } from 'react-router-dom'
 import getPastelColor from '../../utils/getPastelColor'
 import JobLabel from '../../constant/JobLabel'
 
-const HomeSlide1 = () => {
+const JobStackSlide1 = () => {
   const { job } = useParams()
   const data = getTechStackList('front-end')
 
@@ -87,4 +87,4 @@ const TechCard = styled(Box)((props) => {
 
 
 
-export default HomeSlide1
+export default JobStackSlide1
