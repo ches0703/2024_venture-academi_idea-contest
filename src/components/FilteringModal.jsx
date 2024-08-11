@@ -20,17 +20,14 @@ import { useSearchParams } from 'react-router-dom';
 const FilteringModal = ({ open, handleClose }) => {
 
   const [searchParams, setSearchParams] = useSearchParams();
-  const [job, setJob] = useState(searchParams.get('job') || '');
-  const [myTechStack, setMytechStack] = 
-    useState(Boolean(searchParams.get('tech-stack')) ? searchParams.get('tech-stack')?.split(',') : [])
-  const [region, setRegion] = 
-    useState(Boolean(searchParams.get('region')) ? searchParams.get('region')?.split(',') : [])
-  const [salary, setSalary] = useState(searchParams.get('salary') || '')
-  const [career, setCareer] = useState(searchParams.get('career') || '')
-  const techStackList = useRef(getTechStackList('front-end').map(el => el.id))
+  const job = searchParams.get('job') || ''
+  const myTechStack = Boolean(searchParams.get('tech-stack')) ? searchParams.get('tech-stack')?.split(',') : []
+  const region = Boolean(searchParams.get('region')) ? searchParams.get('region')?.split(',') : []
+  const salary =  searchParams.get('salary') || ''
+  const career = searchParams.get('career') || ''
+  const techStackList = [...getTechStackList('front-end').map(el => el.id), ...getTechStackList('back-end').map(el => el.id)]
 
   const handleJobChange = useCallback((event) => {
-    setJob(event.target.value);
     setSearchParams(prevParams => {
       const params = new URLSearchParams(prevParams);
       params.set('job', event.target.value);
@@ -40,7 +37,6 @@ const FilteringModal = ({ open, handleClose }) => {
 
   const handleMyTechStack = useCallback((event, newValue) => {
     const newMyTechStack = newValue
-    setMytechStack(newMyTechStack)
     setSearchParams(prevParams => {
       const params = new URLSearchParams(prevParams);
       params.set('tech-stack', newMyTechStack);
@@ -49,7 +45,6 @@ const FilteringModal = ({ open, handleClose }) => {
   }, [setSearchParams])
 
   const handleRegion = useCallback((event, newValue) => {
-    setRegion(newValue)
     setSearchParams(prevParams => {
       const params = new URLSearchParams(prevParams);
       params.set('region', newValue);
@@ -58,7 +53,6 @@ const FilteringModal = ({ open, handleClose }) => {
   }, [setSearchParams])
 
   const handleSalary = useCallback((event) => {
-    setSalary(event.target.value)
     setSearchParams(prevParams => {
       const params = new URLSearchParams(prevParams);
       params.set('salary', event.target.value);
@@ -67,7 +61,6 @@ const FilteringModal = ({ open, handleClose }) => {
   }, [setSearchParams])
 
   const handleCareer = useCallback((event) => {
-    setCareer(event.target.value)
     setSearchParams(prevParams => {
       const params = new URLSearchParams(prevParams);
       params.set('career', event.target.value);
@@ -100,6 +93,7 @@ const FilteringModal = ({ open, handleClose }) => {
               value={job} label="희망 직무"
               onChange={handleJobChange}
             >
+              <MenuItem value={''}>선택 취소</MenuItem>
               {Object.entries(JobLabel).map(([job, value]) => {
                 return <MenuItem key={job} value={job}>{value.kr}</MenuItem>
               })}
@@ -111,9 +105,9 @@ const FilteringModal = ({ open, handleClose }) => {
             size='medium'
             id="tech-stack-select"
             multiple
-            options={techStackList.current}
+            options={techStackList}
             value={myTechStack}
-            defaultValue={techStackList.current.filter((el) => {
+            defaultValue={techStackList.filter((el) => {
               return myTechStack.includes(el)
             })}
             onChange={handleMyTechStack}
