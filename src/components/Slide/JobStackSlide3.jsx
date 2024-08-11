@@ -14,7 +14,7 @@ const JobStackSlide3 = () => {
   return (
     <Slide>
       <Box textAlign={'center'} marginBottom={'1rem'}>
-        <Typography color={'#FFFFFF'} variant='h2'>{JobLabel[job]['kr']}에게 기업이 우대하는 기술 스택의 순위는 다음과 같아요.</Typography>
+        <Typography color={'#FFFFFF'} variant='h3'>{JobLabel[job]['kr']}에게 기업이 우대하는 기술 스택의 순위는 다음과 같아요.</Typography>
       </Box>
       <ResponsivePie
         height={450}
