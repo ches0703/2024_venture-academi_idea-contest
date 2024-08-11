@@ -23,6 +23,7 @@ const JobPost = () => {
   const region = searchParams.get('region')
   const salary = searchParams.get('salary')
   const career = searchParams.get('career')
+  const isView = Boolean(techStack || region || salary || career)
 
   return (
     <Stack marginTop={'2rem'} spacing={2}>
@@ -45,8 +46,8 @@ const JobPost = () => {
         </Typography>
       </Button>
       <FilteringModal open={open} handleClose={handleClose}></FilteringModal>
-      {searchParams.size !== 0 && <Divider color={'white'} ></Divider>}
-      {searchParams.size !== 0 && <Box sx={{color: '#ffffff'}}>
+      {isView && <Divider color={'white'} ></Divider>}
+      {isView && <Box sx={{color: '#ffffff'}}>
         {job && <Typography variant='body1'>희망 직무 : {JobLabel[job]['kr']}</Typography>}
         {techStack && <Typography variant='body1'>기술 스택 : {techStack.split(',').join(', ')}</Typography>}
         {region && <Typography variant='body1'>근무 지역 : {region.split(',').join(', ')}</Typography>}
