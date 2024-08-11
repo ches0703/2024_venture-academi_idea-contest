@@ -14,7 +14,7 @@ const JobStackSlide4 = () => {
 
   const navigate = useNavigate()
   const { job } = useParams()
-  const data = getTechStackList('front-end')
+  const data = getTechStackList(job)
   const [inputVal, setInputVal] = useState('')
   const [isVisible, setIsVisible] = useState(false);
   const target = useRef()

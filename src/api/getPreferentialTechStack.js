@@ -35,6 +35,33 @@ const data = {
       "label": "AWS",
       "value": 225,
     },
+  ],
+  'back-end': [
+    {
+      "id": "Github",
+      "label": "Github",
+      "value": 578,
+    },
+    {
+      "id": "Docker",
+      "label": "Docker",
+      "value": 328,
+    },
+    {
+      "id": "CI/CD",
+      "label": "CI/CD",
+      "value": 487,
+    },
+    {
+      "id": "Jira",
+      "label": "Jira",
+      "value": 140,
+    },
+    {
+      "id": "JWT",
+      "label": "JWT",
+      "value": 283,
+    },
   ]
 
 }

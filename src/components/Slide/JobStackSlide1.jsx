@@ -14,7 +14,7 @@ import JobLabel from '../../constant/JobLabel'
 
 const JobStackSlide1 = () => {
   const { job } = useParams()
-  const data = getTechStackList('front-end')
+  const data = getTechStackList(job)
 
   return (
     <Slide>

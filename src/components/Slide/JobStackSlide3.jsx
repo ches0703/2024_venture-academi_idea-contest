@@ -9,7 +9,7 @@ import getPreferentialTechStack from '../../api/getPreferentialTechStack'
 const JobStackSlide3 = () => {
 
   const { job } = useParams()
-  const data = getPreferentialTechStack('front-end')
+  const data = getPreferentialTechStack(job)
 
   return (
     <Slide>

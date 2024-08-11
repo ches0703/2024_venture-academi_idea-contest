@@ -8,7 +8,7 @@ import JobLabel from '../../constant/JobLabel'
 
 const JobStackSlide2 = () => {
   const { job } = useParams()
-  const data = getEssentialTechStack('front-end')
+  const data = getEssentialTechStack(job)
   return (
     <Slide>
       <Box textAlign={'center'} marginBottom={'1rem'}>

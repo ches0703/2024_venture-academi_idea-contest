@@ -29,7 +29,45 @@ const data = {
       "id": "Next.js",
       "label": "Next.js",
       "value": 313,
-    }
+    },
+    
+  ],
+  'back-end': [
+    {
+      "id": "Node.js",
+      "label": "Node.js",
+      "value": 212,
+    },
+    {
+      "id": "Express",
+      "label": "Express",
+      "value": 178,
+    },
+    {
+      "id": "Java",
+      "label": "Java",
+      "value": 432,
+    },
+    {
+      "id": "MySQL",
+      "label": "MySQL",
+      "value": 387,
+    },
+    {
+      "id": "Spring Boot",
+      "label": "Spring Boot",
+      "value": 532,
+    },
+    {
+      "id": "Spring",
+      "label": "Spring",
+      "value": 158,
+    },
+    {
+      "id": "Redis",
+      "label": "Redis",
+      "value": 387,
+    },
   ]
 
 }
