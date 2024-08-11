@@ -1,10 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Slide from './Slide'
 import {
-  styled,
   Stack,
   Box,
-  Tooltip,
   Typography,
   TextField,
   Fade
@@ -35,14 +33,12 @@ const JobStackSlide4 = () => {
     })
 
     if (target.current) {
-      observer.observe(target.current);
+      observer.observe(target.current)
     }
 
     return () => {
-      if (target.current) {
-        observer.unobserve(target.current);
-      }
-    };
+      observer.disconnect();
+    }
   }, [])
 
   return (

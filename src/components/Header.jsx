@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import {
   Box,
   Stack,
@@ -85,7 +85,7 @@ const TabTypography = ({ children, isSelect, handleClick }) => {
       flexGrow={(isSelect) ? 6 : 4}
       onClick={handleClick}
       color={'#FFFFFF'}
-      sx={{ transition: '0.4s ease-in-out' }}
+      sx={{ transition: '0.4s ease-in-out', cursor: 'pointer' }}
     >
       {children}
     </Typography>

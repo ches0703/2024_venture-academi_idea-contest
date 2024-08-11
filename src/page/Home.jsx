@@ -1,10 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
-  Select,
   MenuItem,
-  InputLabel,
-  FormControl,
   Fade,
   Menu,
   Button
@@ -26,25 +23,27 @@ const Home = () => {
 
   return (
     <>
-      <Box height={'90vh'} display={'flex'} alignItems={'center'}>
-        <Button
-          endIcon={<ArrowDropDownIcon></ArrowDropDownIcon>}
-          color='white'
-          onClick={handleClick}
-          sx={{
-            "&:hover": {
-              backgroundColor: 'rgba(0,0,0,0)'
-            },
-            borderRadius: '25px',
-            fontWeight: '700',
-            width: '100%',
-            fontSize: '4rem',
-            margin: 'auto'
-          }}
-        >
-          직무를 선택해 주세요
-        </Button>
-      </Box>
+      <Fade in={true}>
+        <Box height={'90vh'} display={'flex'} alignItems={'center'}>
+          <Button
+            endIcon={<ArrowDropDownIcon></ArrowDropDownIcon>}
+            color='white'
+            onClick={handleClick}
+            sx={{
+              "&:hover": {
+                backgroundColor: 'rgba(0,0,0,0)'
+              },
+              borderRadius: '25px',
+              fontWeight: '700',
+              width: '100%',
+              fontSize: '4rem',
+              margin: 'auto'
+            }}
+          >
+            직무를 선택해 주세요
+          </Button>
+        </Box>
+      </Fade>
       <Menu
         id="menu"
         anchorEl={anchorEl}

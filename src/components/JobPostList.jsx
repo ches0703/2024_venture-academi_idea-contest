@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {
   ImageList,
-  ImageListItem
+  ImageListItem,
 } from '@mui/material';
 import { useSearchParams } from 'react-router-dom';
 import getJobPostList from '../api/getJobPostList';
@@ -26,40 +26,40 @@ const JobPostList = () => {
     let filteredList = getJobPostList()
 
     // 직무 필터링
-    if(job) {
+    if (job) {
       filteredList = filteredList.filter(post => {
         return post.job === job
       })
     }
 
     // 기술 스택 필터링
-    if(techStack) {
+    if (techStack) {
       filteredList = filteredList.filter(post => {
         const unionTechStack = [...post.essential, ...post.preferential]
-        return techStack.split(',').every((el) => {return unionTechStack.includes(el)})
+        return techStack.split(',').every((el) => { return unionTechStack.includes(el) })
       })
-    } 
-    
+    }
+
     // 지역 필터링
     if (region) {
       filteredList = filteredList.filter(post => {
         return region.includes(post.region)
       })
-    } 
+    }
 
     // 연봉 필터링
     if (salary) {
       filteredList = filteredList.filter(post => {
         return post.salary >= salary
       })
-    } 
+    }
 
     // 경력 필터링
     if (career) {
       filteredList = filteredList.filter(post => {
         return Number(post.career) <= Number(career)
       })
-    } 
+    }
 
 
     setJobPostList(filteredList)
@@ -69,7 +69,7 @@ const JobPostList = () => {
 
   return (
     <ImageList variant='masonry' gap={8} cols={2}>
-      {jobPostList.map(el => {
+      {jobPostList.map((el, idx) => {
         return (
           <ImageListItem key={el.url}>
             <JobPostCard data={el}></JobPostCard>
