@@ -16,9 +16,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import { useNavigate, useParams } from 'react-router-dom';
-import HomeSlide2 from '../components/Slide/HomeSlide2';
-import JobStackSlide1 from '../components/Slide/JobStackSlide1';
 import JobLabel from '../constant/JobLabel';
+import JobStackSlide1 from '../components/Slide/JobStackSlide1';
+import JobStackSlide2 from '../components/Slide/JobStackSlide2';
 
 const JobStack = () => {
 
@@ -78,7 +78,7 @@ const JobStack = () => {
         className="mySwiper"
       >
         <SwiperSlide><JobStackSlide1></JobStackSlide1></SwiperSlide>
-        <SwiperSlide><HomeSlide2></HomeSlide2></SwiperSlide>
+        <SwiperSlide><JobStackSlide2></JobStackSlide2></SwiperSlide>
         <SwiperSlide>Slide 4</SwiperSlide>
       </Swiper>
       <style>
