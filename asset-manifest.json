@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/2024_venture-academi_idea-contest/static/css/main.566ac412.css",
-    "main.js": "/2024_venture-academi_idea-contest/static/js/main.4582c004.js",
+    "main.js": "/2024_venture-academi_idea-contest/static/js/main.616f5f0c.js",
     "index.html": "/2024_venture-academi_idea-contest/index.html",
     "main.566ac412.css.map": "/2024_venture-academi_idea-contest/static/css/main.566ac412.css.map",
-    "main.4582c004.js.map": "/2024_venture-academi_idea-contest/static/js/main.4582c004.js.map"
+    "main.616f5f0c.js.map": "/2024_venture-academi_idea-contest/static/js/main.616f5f0c.js.map"
   },
   "entrypoints": [
     "static/css/main.566ac412.css",
-    "static/js/main.4582c004.js"
+    "static/js/main.616f5f0c.js"
   ]
 }
