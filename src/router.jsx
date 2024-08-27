@@ -4,26 +4,28 @@ import Home from "./page/Home";
 import JobPost from "./page/JobPost";
 import JobStack from "./page/JobStack";
 
+const router = createHashRouter(
+  [
+    {
+      path: "/",
+      element: <App></App>,
+      children: [
+        {
+          index: true,
+          element: <Home></Home>,
+        },
+        {
+          path: "job-stack/:job",
+          element: <JobStack></JobStack>,
+        },
+        {
+          path: "job-post",
+          element: <JobPost></JobPost>,
+        },
+      ],
+    },
+  ],
+  { basename: "/2024_venture-academi_idea-contest" }
+);
 
-const router = createHashRouter([
-  {
-    path: '/',
-    element: <App></App>,
-    children: [
-      {
-        index: true,
-        element: <Home></Home>
-      },
-      {
-        path: 'job-stack/:job',
-        element: <JobStack></JobStack>
-      },
-      {
-        path: 'job-post',
-        element: <JobPost></JobPost>
-      }
-    ]
-  }
-])
-
-export default router
+export default router;
