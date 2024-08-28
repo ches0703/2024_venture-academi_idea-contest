@@ -1,4 +1,4 @@
-![header](https://capsule-render.vercel.app/api?type=transparent&color=auto&height=200&section=header&text=2024%20산업체%20문제해결%20아이디어%20경진대회&fontSize=30&desc=팀명%20:%20배고파밥줘)
+![header](https://capsule-render.vercel.app/api?type=transparent&color=auto&height=300&section=header&text=2024%20산업체%20문제해결%20아이디어%20경진대회&fontSize=30&desc=팀명%20:%20배고파밥줘)
 
 ## 발표용 프로토타입
 
